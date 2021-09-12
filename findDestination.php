@@ -1,6 +1,7 @@
 <?php
 require_once "Node.php";
 
+// схема графа
 $nodes = [
     [[], 'a'],
     [['a'], 'b'],
@@ -10,7 +11,7 @@ $nodes = [
     [['c'], 'f'],
     [['d', 'e', 'f'], 'g']
 ];
-
+// создаем объекты графа
 foreach ($nodes as $node) {
     $parents = [];
     foreach ($node[0] as $parent) {
